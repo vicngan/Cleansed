@@ -17,13 +17,14 @@ struct HabitView: View {
     @State private var isAddSheetPresented = false
     @State private var newHabitName = ""
     @State private var newHabitStartDate = Date()
-    @State private var hasSynced = false
     @FocusState private var isFocused: Bool
 
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 VStack(alignment: .leading, spacing: 0) {
+                    // Title removed as requested
+
                     if habits.isEmpty {
                         ContentUnavailableView(
                             "No Habits",
@@ -36,11 +37,12 @@ struct HabitView: View {
                             ForEach(habits) { habit in
                                 ZStack {
                                     HabitRowView(habit: habit)
-                                        .contentShape(Rectangle())
+                                        .contentShape(Rectangle())  // Ensure gaps in VStack are tappable
+
                                     NavigationLink(destination: HabitDetailView(habit: habit)) {
                                         Color.clear
                                     }
-                                    .opacity(0)
+                                    .opacity(0)  // Hide the chevron
                                 }
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(
@@ -57,26 +59,11 @@ struct HabitView: View {
                     }
                 }
                 .background(Color(.systemBackground))
-                .onChange(of: habits) { _, newHabits in
-                    HabitWidgetManager.shared.syncHabitsToUserDefaults(newHabits)
-                }
-                .onAppear {
-                    syncFromWidget()
-                    HabitWidgetManager.shared.syncHabitsToUserDefaults(habits)
-                }
-                .onChange(of: scenePhase) { _, newPhase in
-                    if newPhase == .active { syncFromWidget() }
-                }
 
-                FAB { isAddSheetPresented = true }
-                    .padding(24)
-            }
-            .task {
-                guard !hasSynced, auth.isAuthenticated, let userId = auth.currentUserId else {
-                    return
+                FAB {
+                    isAddSheetPresented = true
                 }
-                hasSynced = true
-                await DataSyncManager.shared.loadFromSupabase(userId: userId, context: modelContext)
+                .padding(24)
             }
             .sheet(isPresented: $isAddSheetPresented) {
                 NavigationStack {
@@ -84,7 +71,9 @@ struct HabitView: View {
                         Section {
                             TextField("Habit Name", text: $newHabitName)
                                 .focused($isFocused)
-                                .onSubmit { addHabit() }
+                                .onSubmit {
+                                    addHabit()
+                                }
 
                             DatePicker(
                                 "Start Date",
@@ -105,26 +94,28 @@ struct HabitView: View {
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
-                            Button("Add") { addHabit() }
-                                .disabled(
-                                    newHabitName.trimmingCharacters(in: .whitespacesAndNewlines)
-                                        .isEmpty)
+                            Button("Add") {
+                                addHabit()
+                            }
+                            .disabled(
+                                newHabitName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                            )
                         }
                     }
-                    .onAppear { isFocused = true }
+                    .onAppear {
+                        isFocused = true
+                    }
                 }
                 .presentationDetents([.height(240)])
             }
         }
     }
 
-    // MARK: - Actions
-
     private func addHabit() {
         let trimmed = newHabitName.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
 
-        let newHabit = Habit(name: trimmed, startDate: newHabitStartDate)
+        let newHabit = Habit(name: trimmedName, startDate: newHabitStartDate)
         modelContext.insert(newHabit)
         try? modelContext.save()
 
@@ -138,6 +129,7 @@ struct HabitView: View {
         }
 
         newHabitName = ""
+        newHabitStartDate = Date()
         newHabitStartDate = Date()
         isAddSheetPresented = false
     }

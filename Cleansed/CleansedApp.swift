@@ -49,6 +49,15 @@ struct CleansedApp: App {
                 Task { await authManager.handleDeepLink(url) }
             }
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(for: [TodoItem.self, Habit.self, HabitCompletion.self, FocusSchedule.self])
+        { result in
+            do {
+                let container = try result.get()
+                // Configure automatic migration
+                container.mainContext.autosaveEnabled = true
+            } catch {
+                print("Failed to configure model container: \(error)")
+            }
+        }
     }
 }

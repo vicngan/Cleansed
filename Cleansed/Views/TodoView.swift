@@ -81,9 +81,6 @@ struct TodoView: View {
                         .onDelete(perform: deleteTodos)
                         .onMove { from, to in }
                     }
-                    .animation(
-                        .spring(response: 0.4, dampingFraction: 0.75), value: sortedTodos.map(\.id)
-                    )
                     .padding(.top, 24)
                     .hideListSeparators()
                 }
@@ -136,6 +133,7 @@ struct TodoView: View {
                 }
                 .onAppear { isFocused = true }
             }
+            .presentationDetents([.height(180)])
             .presentationDetents([.height(180)])
         }
     }

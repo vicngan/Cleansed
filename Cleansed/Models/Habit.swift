@@ -14,16 +14,16 @@ final class Habit {
     var name: String
     var createdAt: Date
     var startDate: Date
-    var colorHex: String = ""
-    var iconName: String = ""
 
     @Relationship(deleteRule: .cascade, inverse: \HabitCompletion.habit)
     var completions: [HabitCompletion] = []
 
     init(name: String, startDate: Date = Date()) {
+    init(name: String, startDate: Date = Date()) {
         self.id = UUID()
         self.name = name
         self.createdAt = Date()
+        self.startDate = startDate
         self.startDate = startDate
     }
 
@@ -90,6 +90,7 @@ final class Habit {
     func completionRate() -> (percent: Int, count: Int, total: Int) {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
+        let start = calendar.startOfDay(for: startDate)
         let start = calendar.startOfDay(for: startDate)
 
         let components = calendar.dateComponents([.day], from: start, to: today)
