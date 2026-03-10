@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cleansed-bg: #F4F6FB;
+  --color-cleansed-card: #FFFFFF;
+  --color-cleansed-text: #1C1C1E;
+  --color-cleansed-primary: #007AFF;
+  --color-cleansed-accent: #34C759;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  height: 550px;
+  background-color: var(--color-cleansed-bg);
+  color: var(--color-cleansed-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

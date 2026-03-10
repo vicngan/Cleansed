@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Cleansed Extension",
+  "version": "1.0.0",
+  "description": "Browser extension for Cleansed - Todos, Habits, and Focus.",
+  "action": {
+    "default_title": "Open Cleansed",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "alarms",
+    "notifications",
+    "identity"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ad_blocker_rules",
+        "enabled": false,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
