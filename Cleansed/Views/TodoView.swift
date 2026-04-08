@@ -10,61 +10,177 @@ import SwiftUI
 
 struct TodoView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.scenePhase) private var scenePhase
+    @EnvironmentObject var auth: AuthManager
     @Query(sort: \TodoItem.createdAt, order: .reverse) private var todos: [TodoItem]
+    @State private var hasSynced = false
+
+    @AppStorage("todoFontSize") private var todoFontSize: Double = 18
+    @AppStorage("todoFontWeight") private var todoFontWeight: String = "regular"
+
+    private var sortedTodos: [TodoItem] {
+        todos.sortedByCompletion()
+    }
 
     @State private var isAddSheetPresented = false
     @State private var newTodoTitle = ""
     @FocusState private var isFocused: Bool
 
-    var body: some View {
-        ZStack(alignment: .bottomTrailing) {
-            VStack(alignment: .leading, spacing: 0) {
-                // Custom Header "Inbox"
-                Text("Inbox")
-                    .font(.system(size: 34, weight: .bold, design: .default))
-                    .padding(.horizontal, 20)
-                    .padding(.top, 16)
-                    .padding(.bottom, 8)
+    private var fontWeight: Font.Weight {
+        switch todoFontWeight {
+        case "light": return .light
+        case "medium": return .medium
+        case "semibold": return .semibold
+        case "bold": return .bold
+        default: return .regular
+        }
+    }
 
-                if todos.isEmpty {
-                    ContentUnavailableView(
-                        "All clear",
-                        systemImage: "checkmark.circle",
-                        description: Text("Tap + to add a task")
-                    )
-                    .frame(maxHeight: .infinity)
-                } else {
-                    List {
-                        ForEach(todos) { todo in
-                            Toggle(isOn: Bindable(todo).isCompleted) {
-                                Text(todo.title)
-                                    .font(.body)
+    var body: some View {
+        NavigationStack {
+            ZStack(alignment: .bottomTrailing) {
+                VStack(alignment: .leading, spacing: 0) {
+                    if todos.isEmpty {
+                        ContentUnavailableView(
+                            "All clear",
+                            systemImage: "checkmark.circle",
+                            description: Text("Tap + to add a task")
+                        )
+                        .frame(maxHeight: .infinity)
+                    } else {
+                        List {
+                            ForEach(sortedTodos) { todo in
+                                Button {
+                                    withAnimation(.spring(response: 0.4, dampingFraction: 0.75)) {
+                                        todo.isCompleted.toggle()
+                                        if todo.isCompleted {
+                                            todo.completedAt = Date()
+                                        } else {
+                                            todo.completedAt = nil
+                                            todo.sortDate = Date()
+                                        }
+                                        try? modelContext.save()
+                                        TodoManager.shared.syncTodosToUserDefaults(todos)
+                                        // Mirror to Supabase if signed in
+                                        if auth.isAuthenticated {
+                                            Task {
+                                                try? await SupabaseManager.shared.completeTodo(
+                                                    id: todo.id, isCompleted: todo.isCompleted)
+                                            }
+                                        }
+                                    }
+                                } label: {
+                                    Text(todo.title)
+                                        .font(.system(size: CGFloat(todoFontSize), weight: fontWeight, design: .default))
+                                        .foregroundStyle(
+                                            todo.isCompleted ? Color.secondary : Color.primary
+                                        )
+                                        .strikethrough(todo.isCompleted, color: Color.secondary)
+                                        .animation(.easeInOut(duration: 0.2), value: todo.isCompleted)
+                                }
+                                .buttonStyle(.plain)
+                                .listRowSeparator(.hidden)
+                                .listRowInsets(
+                                    EdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24))
                             }
-                            .toggleStyle(MinimalistCheckboxStyle())
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))  // Padding for rows
+                            .onDelete(perform: deleteTodos)
                         }
-                        .onDelete(perform: deleteTodos)
+                        .animation(
+                            .spring(response: 0.4, dampingFraction: 0.75), value: sortedTodos.map(\.id)
+                        )
+                        .padding(.top, 24)
+                        .hideListSeparators()
                     }
-                    .hideListSeparators()
+                }
+                .background(Color(.systemBackground))
+
+                // Customization Menu Button (Top Right)
+                VStack {
+                    HStack {
+                        Spacer()
+                        Menu {
+                            Section("Font Size") {
+                                Button { todoFontSize += 1 } label: {
+                                    Label("Increase", systemImage: "plus")
+                                }
+                                .menuActionDismissBehavior(.disabled)
+
+                                Button { todoFontSize -= 1 } label: {
+                                    Label("Decrease", systemImage: "minus")
+                                }
+                                .menuActionDismissBehavior(.disabled)
+                            }
+
+                            Section("Font Weight") {
+                                Picker("Weight", selection: $todoFontWeight) {
+                                    Text("Light").tag("light")
+                                    Text("Regular").tag("regular")
+                                    Text("Medium").tag("medium")
+                                    Text("Semibold").tag("semibold")
+                                    Text("Bold").tag("bold")
+                                }
+                                .pickerStyle(.menu)
+                                .menuActionDismissBehavior(.disabled)
+                            }
+
+                            Button(role: .destructive) {
+                                todoFontSize = 18
+                                todoFontWeight = "regular"
+                            } label: {
+                                Label("Reset Defaults", systemImage: "arrow.counterclockwise")
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis")
+                                .font(.system(size: 20))
+                                .foregroundStyle(Color.primary)
+                                .frame(width: 44, height: 44)
+                                .background(Color(.systemBackground).opacity(0.1))
+                                .clipShape(Circle())
+                        }
+                        .padding(.top, 8)
+                        .padding(.trailing, 16)
+                    }
+                    Spacer()
+                }
+
+                FAB { isAddSheetPresented = true }
+                    .padding(24)
+            }
+            .toolbar(.hidden, for: .navigationBar)
+            .onChange(of: todos) { _, newTodos in
+                TodoManager.shared.syncTodosToUserDefaults(newTodos)
+            }
+            .onAppear {
+                syncFromWidget()
+                TodoManager.shared.syncTodosToUserDefaults(todos)
+            }
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .active {
+                    syncFromWidget()
+                    if auth.isAuthenticated, let userId = auth.currentUserId {
+                        Task {
+                            await DataSyncManager.shared.syncIfStale(
+                                userId: userId, context: modelContext)
+                        }
+                    }
                 }
             }
-            .background(Color(.systemBackground))
-
-            // FAB
-            FAB {
-                isAddSheetPresented = true
+            .task {
+                guard !hasSynced, auth.isAuthenticated, let userId = auth.currentUserId else {
+                    return
+                }
+                hasSynced = true
+                await DataSyncManager.shared.loadFromSupabase(userId: userId, context: modelContext)
+                TodoManager.shared.syncTodosToUserDefaults(todos)
             }
-            .padding(24)
         }
         .sheet(isPresented: $isAddSheetPresented) {
+
             NavigationStack {
                 Form {
                     TextField("New Task", text: $newTodoTitle)
                         .focused($isFocused)
-                        .onSubmit {
-                            addTodo()
-                        }
+                        .onSubmit { addTodo() }
                 }
                 .navigationTitle("New Task")
                 .navigationBarTitleDisplayMode(.inline)
@@ -76,40 +192,62 @@ struct TodoView: View {
                         }
                     }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Add") {
-                            addTodo()
-                        }
-                        .disabled(
-                            newTodoTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                        Button("Add") { addTodo() }
+                            .disabled(
+                                newTodoTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                            )
                     }
                 }
-                .onAppear {
-                    isFocused = true
-                }
+                .onAppear { isFocused = true }
             }
-            .presentationDetents([.medium])
+            .presentationDetents([.height(180)])
         }
     }
 
+    // MARK: - Actions
+
     private func addTodo() {
-        let trimmedTitle = newTodoTitle.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmedTitle.isEmpty else { return }
+        let trimmed = newTodoTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
 
-        let newTodo = TodoItem(title: trimmedTitle)
+        let newTodo = TodoItem(title: trimmed)
         modelContext.insert(newTodo)
+        try? modelContext.save()
+        newTodoTitle = ""
+        isAddSheetPresented = false
 
-        do {
-            try modelContext.save()
-            newTodoTitle = ""
-            isAddSheetPresented = false
-        } catch {
-            print("Failed to save context: \(error)")
+        // Mirror to Supabase if signed in
+        if auth.isAuthenticated, let userId = auth.currentUserId {
+            Task {
+                try? await SupabaseManager.shared.createTodoWithId(
+                    id: newTodo.id, title: newTodo.title,
+                    isCompleted: false, completedAt: nil,
+                    sortDate: newTodo.sortDate, userId: userId)
+            }
         }
     }
 
     private func deleteTodos(at offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(todos[index])
+        let toDelete = offsets.map { sortedTodos[$0] }
+        for todo in toDelete {
+            if auth.isAuthenticated {
+                Task { try? await SupabaseManager.shared.deleteTodo(id: todo.id) }
+            }
+            modelContext.delete(todo)
+        }
+        try? modelContext.save()
+    }
+
+    private func syncFromWidget() {
+        let widgetTodos = TodoManager.shared.getTodosFromUserDefaults()
+        for widgetTodo in widgetTodos {
+            if let existing = todos.first(where: { $0.id == widgetTodo.id }) {
+                if existing.isCompleted != widgetTodo.isCompleted {
+                    existing.isCompleted = widgetTodo.isCompleted
+                    existing.completedAt = widgetTodo.completedAt
+                    existing.sortDate = widgetTodo.sortDate
+                }
+            }
         }
         try? modelContext.save()
     }
@@ -118,4 +256,5 @@ struct TodoView: View {
 #Preview {
     TodoView()
         .modelContainer(for: TodoItem.self, inMemory: true)
+        .environmentObject(AuthManager())
 }

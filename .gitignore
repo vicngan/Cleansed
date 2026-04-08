@@ -1,0 +1,43 @@
+# AI Agents & Assistants
+.agents/
+.agent/
+.gemini/
+.anthropic/
+.claude/
+.claudesettings
+.clauderules
+.claudevars
+skills-lock.json
+FILE_CONTEXT.txt
+.aider*
+.continue/
+.cursor/
+.copilot/
+agent-logs/
+*.log
+
+# Xcode
+# Build artifacts
+build/
+DerivedData/
+
+# Personal settings
+xcuserdata/
+logo/
+# Xcode Project settings
+!.xcodeproj/project.pbxproj
+!.xcodeproj/xcshareddata/
+!.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+
+# Secrets
+Cleansed/SupabaseClient.swift
+schema.sql
+

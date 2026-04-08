@@ -6,7 +6,63 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FD7AE1BC2F4D5F8C004918C7 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BB2F4D5F8C004918C7 /* FamilyControls.framework */; };
+		FD7AE1BE2F4D5F97004918C7 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BD2F4D5F97004918C7 /* ManagedSettings.framework */; };
+		FD7AE1C02F4D5F9F004918C7 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BF2F4D5F9F004918C7 /* DeviceActivity.framework */; };
+		FD7AE1C62F4D60B1004918C7 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BF2F4D5F9F004918C7 /* DeviceActivity.framework */; };
+		FD7AE1CE2F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD7AE1C52F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD7AE1DB2F4D6119004918C7 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BD2F4D5F97004918C7 /* ManagedSettings.framework */; };
+		FD7AE1DD2F4D6119004918C7 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1DC2F4D6119004918C7 /* ManagedSettingsUI.framework */; };
+		FD7AE1E52F4D6119004918C7 /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD7AE1DA2F4D6119004918C7 /* ShieldConfigurationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD7AE1EF2F4D6147004918C7 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7AE1BD2F4D5F97004918C7 /* ManagedSettings.framework */; };
+		FD7AE1F72F4D6147004918C7 /* ShieldActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD7AE1EE2F4D6147004918C7 /* ShieldActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD7AE20F2F4D6175004918C7 /* DeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = FD7AE2032F4D6175004918C7 /* DeviceActivityReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD7B9EF82F55138B002E5F51 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = FD7B9EF72F55138B002E5F51 /* Supabase */; };
+		FD7F058C2F59E7AA00894E3E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA88A92F44B14500792EFD /* WidgetKit.framework */; };
+		FD7F058D2F59E7AA00894E3E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA88AB2F44B14500792EFD /* SwiftUI.framework */; };
+		FD7F059A2F59E7AC00894E3E /* HabitWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD7F058B2F59E7AA00894E3E /* HabitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FDFA88AA2F44B14500792EFD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA88A92F44B14500792EFD /* WidgetKit.framework */; };
+		FDFA88AC2F44B14500792EFD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFA88AB2F44B14500792EFD /* SwiftUI.framework */; };
+		FDFA88BB2F44B14800792EFD /* TodoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FDFA88A72F44B14500792EFD /* TodoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		FD7AE1CC2F4D60B1004918C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7AE1C42F4D60B1004918C7;
+			remoteInfo = DeviceActivityMonitorExtension;
+		};
+		FD7AE1E32F4D6119004918C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7AE1D92F4D6119004918C7;
+			remoteInfo = ShieldConfigurationExtension;
+		};
+		FD7AE1F52F4D6147004918C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7AE1ED2F4D6147004918C7;
+			remoteInfo = ShieldActionExtension;
+		};
+		FD7AE20D2F4D6175004918C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7AE2022F4D6175004918C7;
+			remoteInfo = DeviceActivityReportExtension;
+		};
+		FD7F05982F59E7AC00894E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7F058A2F59E7AA00894E3E;
+			remoteInfo = HabitWidgetExtension;
+		};
 		FDD2B1562F40A8E1008572F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
@@ -21,17 +77,233 @@
 			remoteGlobalIDString = FDD2B1472F40A8DF008572F8;
 			remoteInfo = Cleansed;
 		};
+		FDFA88B92F44B14800792EFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDD2B1402F40A8DF008572F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFA88A62F44B14500792EFD;
+			remoteInfo = TodoWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FD7AE2142F4D6175004918C7 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				FD7AE20F2F4D6175004918C7 /* DeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFA88C02F44B14800792EFD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD7AE1CE2F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
+				FD7F059A2F59E7AC00894E3E /* HabitWidgetExtension.appex in Embed Foundation Extensions */,
+				FD7AE1E52F4D6119004918C7 /* ShieldConfigurationExtension.appex in Embed Foundation Extensions */,
+				FDFA88BB2F44B14800792EFD /* TodoWidgetExtension.appex in Embed Foundation Extensions */,
+				FD7AE1F72F4D6147004918C7 /* ShieldActionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		FDD2B1482F40A8DF008572F8 /* Cleansed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleansed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7AE1BB2F4D5F8C004918C7 /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		FD7AE1BD2F4D5F97004918C7 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		FD7AE1BF2F4D5F9F004918C7 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		FD7AE1C52F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7AE1DA2F4D6119004918C7 /* ShieldConfigurationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfigurationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7AE1DC2F4D6119004918C7 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		FD7AE1EE2F4D6147004918C7 /* ShieldActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7AE2032F4D6175004918C7 /* DeviceActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = DeviceActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7F058B2F59E7AA00894E3E /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7F059F2F59E7F000894E3E /* HabitWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitWidgetExtension.entitlements; sourceTree = "<group>"; };
+		FDD2B1482F40A8DF008572F8 /* Clero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD2B1552F40A8E1008572F8 /* CleansedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleansedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD2B15F2F40A8E1008572F8 /* CleansedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleansedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFA88A72F44B14500792EFD /* TodoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFA88A92F44B14500792EFD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FDFA88AB2F44B14500792EFD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FDFA88C72F44B44800792EFD /* TodoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FD2B89E22F6740130017E45F /* Exceptions for "ShieldActionExtension" folder in "Cleansed" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ShieldActionExtension.swift,
+			);
+			target = FDD2B1472F40A8DF008572F8 /* Cleansed */;
+		};
+		FD7AE1E92F4D6119004918C7 /* Exceptions for "ShieldConfigurationExtension" folder in "ShieldConfigurationExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD7AE1D92F4D6119004918C7 /* ShieldConfigurationExtension */;
+		};
+		FD7AE2202F4D6259004918C7 /* Exceptions for "Cleansed" folder in "DeviceActivityMonitorExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ScreenTimeShared.swift,
+			);
+			target = FD7AE1C42F4D60B1004918C7 /* DeviceActivityMonitorExtension */;
+		};
+		FD7AE2212F4D6259004918C7 /* Exceptions for "Cleansed" folder in "ShieldConfigurationExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ScreenTimeShared.swift,
+			);
+			target = FD7AE1D92F4D6119004918C7 /* ShieldConfigurationExtension */;
+		};
+		FD7AE2222F4D6259004918C7 /* Exceptions for "Cleansed" folder in "ShieldActionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ScreenTimeShared.swift,
+			);
+			target = FD7AE1ED2F4D6147004918C7 /* ShieldActionExtension */;
+		};
+		FD7AE2232F4D6259004918C7 /* Exceptions for "Cleansed" folder in "DeviceActivityReportExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ScreenTimeShared.swift,
+			);
+			target = FD7AE2022F4D6175004918C7 /* DeviceActivityReportExtension */;
+		};
+		FD7AE30C2F4D662E004918C7 /* Exceptions for "DeviceActivityMonitorExtension" folder in "DeviceActivityMonitorExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD7AE1C42F4D60B1004918C7 /* DeviceActivityMonitorExtension */;
+		};
+		FD7AE30D2F4D6632004918C7 /* Exceptions for "ShieldActionExtension" folder in "ShieldActionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD7AE1ED2F4D6147004918C7 /* ShieldActionExtension */;
+		};
+		FD7AE30E2F4D6635004918C7 /* Exceptions for "DeviceActivityReportExtension" folder in "DeviceActivityReportExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD7AE2022F4D6175004918C7 /* DeviceActivityReportExtension */;
+		};
+		FD7F059E2F59E7AC00894E3E /* Exceptions for "HabitWidget" folder in "HabitWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD7F058A2F59E7AA00894E3E /* HabitWidgetExtension */;
+		};
+		FD7F05A52F59E9B000894E3E /* Exceptions for "Cleansed" folder in "HabitWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Intents/ToggleHabitIntent.swift,
+				Managers/HabitWidgetManager.swift,
+				Models/Habit.swift,
+				Models/HabitCompletion.swift,
+			);
+			target = FD7F058A2F59E7AA00894E3E /* HabitWidgetExtension */;
+		};
+		FD7F05AE2F59F13400894E3E /* Exceptions for "HabitWidget" folder in "Cleansed" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HabitEntity.swift,
+				SelectHabitIntent.swift,
+			);
+			target = FDD2B1472F40A8DF008572F8 /* Cleansed */;
+		};
+		FDFA88C32F44B38D00792EFD /* Exceptions for "Cleansed" folder in "TodoWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Intents/ToggleTodoIntent.swift,
+				Managers/TodoManager.swift,
+				Models/TodoItem.swift,
+				Models/WidgetSettings.swift,
+			);
+			target = FDFA88A62F44B14500792EFD /* TodoWidgetExtension */;
+		};
+		FDFA88C92F44B48700792EFD /* Exceptions for "Cleansed" folder in "Cleansed" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FDD2B1472F40A8DF008572F8 /* Cleansed */;
+		};
+		FDFA88CA2F44B57C00792EFD /* Exceptions for "TodoWidget" folder in "TodoWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FDFA88A62F44B14500792EFD /* TodoWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FD7AE1C72F4D60B1004918C7 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FD7AE30C2F4D662E004918C7 /* Exceptions for "DeviceActivityMonitorExtension" folder in "DeviceActivityMonitorExtension" target */,
+			);
+			path = DeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
+		FD7AE1DE2F4D6119004918C7 /* ShieldConfigurationExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FD7AE1E92F4D6119004918C7 /* Exceptions for "ShieldConfigurationExtension" folder in "ShieldConfigurationExtension" target */,
+			);
+			path = ShieldConfigurationExtension;
+			sourceTree = "<group>";
+		};
+		FD7AE1F02F4D6147004918C7 /* ShieldActionExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FD2B89E22F6740130017E45F /* Exceptions for "ShieldActionExtension" folder in "Cleansed" target */,
+				FD7AE30D2F4D6632004918C7 /* Exceptions for "ShieldActionExtension" folder in "ShieldActionExtension" target */,
+			);
+			path = ShieldActionExtension;
+			sourceTree = "<group>";
+		};
+		FD7AE2042F4D6175004918C7 /* DeviceActivityReportExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FD7AE30E2F4D6635004918C7 /* Exceptions for "DeviceActivityReportExtension" folder in "DeviceActivityReportExtension" target */,
+			);
+			path = DeviceActivityReportExtension;
+			sourceTree = "<group>";
+		};
+		FD7F058E2F59E7AA00894E3E /* HabitWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FD7F05AE2F59F13400894E3E /* Exceptions for "HabitWidget" folder in "Cleansed" target */,
+				FD7F059E2F59E7AC00894E3E /* Exceptions for "HabitWidget" folder in "HabitWidgetExtension" target */,
+			);
+			path = HabitWidget;
+			sourceTree = "<group>";
+		};
 		FDD2B14A2F40A8DF008572F8 /* Cleansed */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FDFA88C92F44B48700792EFD /* Exceptions for "Cleansed" folder in "Cleansed" target */,
+				FDFA88C32F44B38D00792EFD /* Exceptions for "Cleansed" folder in "TodoWidgetExtension" target */,
+				FD7AE2202F4D6259004918C7 /* Exceptions for "Cleansed" folder in "DeviceActivityMonitorExtension" target */,
+				FD7AE2212F4D6259004918C7 /* Exceptions for "Cleansed" folder in "ShieldConfigurationExtension" target */,
+				FD7AE2222F4D6259004918C7 /* Exceptions for "Cleansed" folder in "ShieldActionExtension" target */,
+				FD7AE2232F4D6259004918C7 /* Exceptions for "Cleansed" folder in "DeviceActivityReportExtension" target */,
+				FD7F05A52F59E9B000894E3E /* Exceptions for "Cleansed" folder in "HabitWidgetExtension" target */,
+			);
 			path = Cleansed;
 			sourceTree = "<group>";
 		};
@@ -45,13 +317,63 @@
 			path = CleansedUITests;
 			sourceTree = "<group>";
 		};
+		FDFA88AD2F44B14500792EFD /* TodoWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FDFA88CA2F44B57C00792EFD /* Exceptions for "TodoWidget" folder in "TodoWidgetExtension" target */,
+			);
+			path = TodoWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD7AE1C22F4D60B1004918C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7AE1C62F4D60B1004918C7 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1D72F4D6119004918C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7AE1DB2F4D6119004918C7 /* ManagedSettings.framework in Frameworks */,
+				FD7AE1DD2F4D6119004918C7 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1EB2F4D6147004918C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7AE1EF2F4D6147004918C7 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE2002F4D6175004918C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7F05882F59E7AA00894E3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7F058D2F59E7AA00894E3E /* SwiftUI.framework in Frameworks */,
+				FD7F058C2F59E7AA00894E3E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDD2B1452F40A8DF008572F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7B9EF82F55138B002E5F51 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,15 +391,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA88A42F44B14500792EFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7AE1C02F4D5F9F004918C7 /* DeviceActivity.framework in Frameworks */,
+				FDFA88AC2F44B14500792EFD /* SwiftUI.framework in Frameworks */,
+				FD7AE1BC2F4D5F8C004918C7 /* FamilyControls.framework in Frameworks */,
+				FDFA88AA2F44B14500792EFD /* WidgetKit.framework in Frameworks */,
+				FD7AE1BE2F4D5F97004918C7 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FDD2B13F2F40A8DF008572F8 = {
 			isa = PBXGroup;
 			children = (
+				FD7F059F2F59E7F000894E3E /* HabitWidgetExtension.entitlements */,
+				FDFA88C72F44B44800792EFD /* TodoWidgetExtension.entitlements */,
 				FDD2B14A2F40A8DF008572F8 /* Cleansed */,
 				FDD2B1582F40A8E1008572F8 /* CleansedTests */,
 				FDD2B1622F40A8E1008572F8 /* CleansedUITests */,
+				FDFA88AD2F44B14500792EFD /* TodoWidget */,
+				FD7AE1C72F4D60B1004918C7 /* DeviceActivityMonitorExtension */,
+				FD7AE1DE2F4D6119004918C7 /* ShieldConfigurationExtension */,
+				FD7AE1F02F4D6147004918C7 /* ShieldActionExtension */,
+				FD7AE2042F4D6175004918C7 /* DeviceActivityReportExtension */,
+				FD7F058E2F59E7AA00894E3E /* HabitWidget */,
+				FDFA88A82F44B14500792EFD /* Frameworks */,
 				FDD2B1492F40A8DF008572F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,16 +428,145 @@
 		FDD2B1492F40A8DF008572F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FDD2B1482F40A8DF008572F8 /* Cleansed.app */,
+				FDD2B1482F40A8DF008572F8 /* Clero.app */,
 				FDD2B1552F40A8E1008572F8 /* CleansedTests.xctest */,
 				FDD2B15F2F40A8E1008572F8 /* CleansedUITests.xctest */,
+				FDFA88A72F44B14500792EFD /* TodoWidgetExtension.appex */,
+				FD7AE1C52F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex */,
+				FD7AE1DA2F4D6119004918C7 /* ShieldConfigurationExtension.appex */,
+				FD7AE1EE2F4D6147004918C7 /* ShieldActionExtension.appex */,
+				FD7AE2032F4D6175004918C7 /* DeviceActivityReportExtension.appex */,
+				FD7F058B2F59E7AA00894E3E /* HabitWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FDFA88A82F44B14500792EFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD7AE1BF2F4D5F9F004918C7 /* DeviceActivity.framework */,
+				FD7AE1BD2F4D5F97004918C7 /* ManagedSettings.framework */,
+				FD7AE1BB2F4D5F8C004918C7 /* FamilyControls.framework */,
+				FDFA88A92F44B14500792EFD /* WidgetKit.framework */,
+				FDFA88AB2F44B14500792EFD /* SwiftUI.framework */,
+				FD7AE1DC2F4D6119004918C7 /* ManagedSettingsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD7AE1C42F4D60B1004918C7 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7AE1CF2F4D60B1004918C7 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */;
+			buildPhases = (
+				FD7AE1C12F4D60B1004918C7 /* Sources */,
+				FD7AE1C22F4D60B1004918C7 /* Frameworks */,
+				FD7AE1C32F4D60B1004918C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD7AE1C72F4D60B1004918C7 /* DeviceActivityMonitorExtension */,
+			);
+			name = DeviceActivityMonitorExtension;
+			packageProductDependencies = (
+			);
+			productName = DeviceActivityMonitorExtension;
+			productReference = FD7AE1C52F4D60B1004918C7 /* DeviceActivityMonitorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FD7AE1D92F4D6119004918C7 /* ShieldConfigurationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7AE1E62F4D6119004918C7 /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */;
+			buildPhases = (
+				FD7AE1D62F4D6119004918C7 /* Sources */,
+				FD7AE1D72F4D6119004918C7 /* Frameworks */,
+				FD7AE1D82F4D6119004918C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD7AE1DE2F4D6119004918C7 /* ShieldConfigurationExtension */,
+			);
+			name = ShieldConfigurationExtension;
+			packageProductDependencies = (
+			);
+			productName = ShieldConfigurationExtension;
+			productReference = FD7AE1DA2F4D6119004918C7 /* ShieldConfigurationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FD7AE1ED2F4D6147004918C7 /* ShieldActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7AE1F82F4D6147004918C7 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */;
+			buildPhases = (
+				FD7AE1EA2F4D6147004918C7 /* Sources */,
+				FD7AE1EB2F4D6147004918C7 /* Frameworks */,
+				FD7AE1EC2F4D6147004918C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD7AE1F02F4D6147004918C7 /* ShieldActionExtension */,
+			);
+			name = ShieldActionExtension;
+			packageProductDependencies = (
+			);
+			productName = ShieldActionExtension;
+			productReference = FD7AE1EE2F4D6147004918C7 /* ShieldActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FD7AE2022F4D6175004918C7 /* DeviceActivityReportExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7AE2102F4D6175004918C7 /* Build configuration list for PBXNativeTarget "DeviceActivityReportExtension" */;
+			buildPhases = (
+				FD7AE1FF2F4D6175004918C7 /* Sources */,
+				FD7AE2002F4D6175004918C7 /* Frameworks */,
+				FD7AE2012F4D6175004918C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD7AE2042F4D6175004918C7 /* DeviceActivityReportExtension */,
+			);
+			name = DeviceActivityReportExtension;
+			packageProductDependencies = (
+			);
+			productName = DeviceActivityReportExtension;
+			productReference = FD7AE2032F4D6175004918C7 /* DeviceActivityReportExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		FD7F058A2F59E7AA00894E3E /* HabitWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7F059D2F59E7AC00894E3E /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */;
+			buildPhases = (
+				FD7F05872F59E7AA00894E3E /* Sources */,
+				FD7F05882F59E7AA00894E3E /* Frameworks */,
+				FD7F05892F59E7AA00894E3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD7F058E2F59E7AA00894E3E /* HabitWidget */,
+			);
+			name = HabitWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HabitWidgetExtension;
+			productReference = FD7F058B2F59E7AA00894E3E /* HabitWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FDD2B1472F40A8DF008572F8 /* Cleansed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDD2B1692F40A8E1008572F8 /* Build configuration list for PBXNativeTarget "Cleansed" */;
@@ -102,19 +574,28 @@
 				FDD2B1442F40A8DF008572F8 /* Sources */,
 				FDD2B1452F40A8DF008572F8 /* Frameworks */,
 				FDD2B1462F40A8DF008572F8 /* Resources */,
+				FDFA88C02F44B14800792EFD /* Embed Foundation Extensions */,
+				FD7AE2142F4D6175004918C7 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDFA88BA2F44B14800792EFD /* PBXTargetDependency */,
+				FD7AE1CD2F4D60B1004918C7 /* PBXTargetDependency */,
+				FD7AE1E42F4D6119004918C7 /* PBXTargetDependency */,
+				FD7AE1F62F4D6147004918C7 /* PBXTargetDependency */,
+				FD7AE20E2F4D6175004918C7 /* PBXTargetDependency */,
+				FD7F05992F59E7AC00894E3E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				FDD2B14A2F40A8DF008572F8 /* Cleansed */,
 			);
 			name = Cleansed;
 			packageProductDependencies = (
+				FD7B9EF72F55138B002E5F51 /* Supabase */,
 			);
 			productName = Cleansed;
-			productReference = FDD2B1482F40A8DF008572F8 /* Cleansed.app */;
+			productReference = FDD2B1482F40A8DF008572F8 /* Clero.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FDD2B1542F40A8E1008572F8 /* CleansedTests */ = {
@@ -163,6 +644,28 @@
 			productReference = FDD2B15F2F40A8E1008572F8 /* CleansedUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FDFA88A62F44B14500792EFD /* TodoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFA88BD2F44B14800792EFD /* Build configuration list for PBXNativeTarget "TodoWidgetExtension" */;
+			buildPhases = (
+				FDFA88A32F44B14500792EFD /* Sources */,
+				FDFA88A42F44B14500792EFD /* Frameworks */,
+				FDFA88A52F44B14500792EFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FDFA88AD2F44B14500792EFD /* TodoWidget */,
+			);
+			name = TodoWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TodoWidgetExtension;
+			productReference = FDFA88A72F44B14500792EFD /* TodoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,9 +673,24 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					FD7AE1C42F4D60B1004918C7 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FD7AE1D92F4D6119004918C7 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FD7AE1ED2F4D6147004918C7 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FD7AE2022F4D6175004918C7 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FD7F058A2F59E7AA00894E3E = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					FDD2B1472F40A8DF008572F8 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -183,6 +701,9 @@
 					FDD2B15E2F40A8E1008572F8 = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = FDD2B1472F40A8DF008572F8;
+					};
+					FDFA88A62F44B14500792EFD = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
@@ -195,6 +716,9 @@
 			);
 			mainGroup = FDD2B13F2F40A8DF008572F8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FD7B9EF62F55138B002E5F51 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FDD2B1492F40A8DF008572F8 /* Products */;
 			projectDirPath = "";
@@ -203,11 +727,52 @@
 				FDD2B1472F40A8DF008572F8 /* Cleansed */,
 				FDD2B1542F40A8E1008572F8 /* CleansedTests */,
 				FDD2B15E2F40A8E1008572F8 /* CleansedUITests */,
+				FDFA88A62F44B14500792EFD /* TodoWidgetExtension */,
+				FD7AE1C42F4D60B1004918C7 /* DeviceActivityMonitorExtension */,
+				FD7AE1D92F4D6119004918C7 /* ShieldConfigurationExtension */,
+				FD7AE1ED2F4D6147004918C7 /* ShieldActionExtension */,
+				FD7AE2022F4D6175004918C7 /* DeviceActivityReportExtension */,
+				FD7F058A2F59E7AA00894E3E /* HabitWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD7AE1C32F4D60B1004918C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1D82F4D6119004918C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1EC2F4D6147004918C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE2012F4D6175004918C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7F05892F59E7AA00894E3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDD2B1462F40A8DF008572F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,9 +794,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA88A52F44B14500792EFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD7AE1C12F4D60B1004918C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1D62F4D6119004918C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1EA2F4D6147004918C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7AE1FF2F4D6175004918C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7F05872F59E7AA00894E3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDD2B1442F40A8DF008572F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,9 +860,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFA88A32F44B14500792EFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD7AE1CD2F4D60B1004918C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7AE1C42F4D60B1004918C7 /* DeviceActivityMonitorExtension */;
+			targetProxy = FD7AE1CC2F4D60B1004918C7 /* PBXContainerItemProxy */;
+		};
+		FD7AE1E42F4D6119004918C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7AE1D92F4D6119004918C7 /* ShieldConfigurationExtension */;
+			targetProxy = FD7AE1E32F4D6119004918C7 /* PBXContainerItemProxy */;
+		};
+		FD7AE1F62F4D6147004918C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7AE1ED2F4D6147004918C7 /* ShieldActionExtension */;
+			targetProxy = FD7AE1F52F4D6147004918C7 /* PBXContainerItemProxy */;
+		};
+		FD7AE20E2F4D6175004918C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7AE2022F4D6175004918C7 /* DeviceActivityReportExtension */;
+			targetProxy = FD7AE20D2F4D6175004918C7 /* PBXContainerItemProxy */;
+		};
+		FD7F05992F59E7AC00894E3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7F058A2F59E7AA00894E3E /* HabitWidgetExtension */;
+			targetProxy = FD7F05982F59E7AC00894E3E /* PBXContainerItemProxy */;
+		};
 		FDD2B1572F40A8E1008572F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDD2B1472F40A8DF008572F8 /* Cleansed */;
@@ -266,9 +905,318 @@
 			target = FDD2B1472F40A8DF008572F8 /* Cleansed */;
 			targetProxy = FDD2B1602F40A8E1008572F8 /* PBXContainerItemProxy */;
 		};
+		FDFA88BA2F44B14800792EFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFA88A62F44B14500792EFD /* TodoWidgetExtension */;
+			targetProxy = FDFA88B92F44B14800792EFD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FD7AE1D02F4D60B1004918C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD7AE1D12F4D60B1004918C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityMonitorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityMonitorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD7AE1E72F4D6119004918C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfigurationExtension/ShieldConfigurationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfigurationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfigurationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.ShieldConfigurationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD7AE1E82F4D6119004918C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldConfigurationExtension/ShieldConfigurationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfigurationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfigurationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.ShieldConfigurationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD7AE1F92F4D6147004918C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldActionExtension/ShieldActionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.ShieldActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD7AE1FA2F4D6147004918C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShieldActionExtension/ShieldActionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldActionExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.ShieldActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD7AE2112F4D6175004918C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityReportExtension/DeviceActivityReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityReportExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityReportExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.DeviceActivityReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD7AE2122F4D6175004918C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityReportExtension/DeviceActivityReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityReportExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityReportExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.DeviceActivityReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD7F059B2F59E7AC00894E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HabitWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.HabitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD7F059C2F59E7AC00894E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HabitWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.HabitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FDD2B1672F40A8E1008572F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,12 +1341,16 @@
 		FDD2B16A2F40A8E1008572F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Cleansed/Cleansed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cleansed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,7 +1362,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Clero;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,12 +1372,16 @@
 		FDD2B16B2F40A8E1008572F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = Cleansed/Cleansed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cleansed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,7 +1393,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Clero;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,9 +1468,118 @@
 			};
 			name = Release;
 		};
+		FDFA88BE2F44B14800792EFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.TodoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDFA88BF2F44B14800792EFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ4KUHNN8J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TodoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learn.Cleansed.TodoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD7AE1CF2F4D60B1004918C7 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7AE1D02F4D60B1004918C7 /* Debug */,
+				FD7AE1D12F4D60B1004918C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7AE1E62F4D6119004918C7 /* Build configuration list for PBXNativeTarget "ShieldConfigurationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7AE1E72F4D6119004918C7 /* Debug */,
+				FD7AE1E82F4D6119004918C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7AE1F82F4D6147004918C7 /* Build configuration list for PBXNativeTarget "ShieldActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7AE1F92F4D6147004918C7 /* Debug */,
+				FD7AE1FA2F4D6147004918C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7AE2102F4D6175004918C7 /* Build configuration list for PBXNativeTarget "DeviceActivityReportExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7AE2112F4D6175004918C7 /* Debug */,
+				FD7AE2122F4D6175004918C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7F059D2F59E7AC00894E3E /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7F059B2F59E7AC00894E3E /* Debug */,
+				FD7F059C2F59E7AC00894E3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDD2B1432F40A8DF008572F8 /* Build configuration list for PBXProject "Cleansed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -551,7 +1616,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FDFA88BD2F44B14800792EFD /* Build configuration list for PBXNativeTarget "TodoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFA88BE2F44B14800792EFD /* Debug */,
+				FDFA88BF2F44B14800792EFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD7B9EF62F55138B002E5F51 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD7B9EF72F55138B002E5F51 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD7B9EF62F55138B002E5F51 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDD2B1402F40A8DF008572F8 /* Project object */;
 }
